@@ -617,7 +617,6 @@
         See how it works
       </a>
     </div>
-    <p style="margin-top:16px;font-size:0.8rem;color:var(--muted);">🍎 iPhone coming soon &nbsp;·&nbsp; <a href="mailto:support@dosetrail.com" style="color:var(--accent)">Get notified</a></p>
   </div>
 
   <!-- PHONE MOCKUPS -->
@@ -749,8 +748,8 @@
       </div>
       <div class="feature-card">
         <div class="feature-icon">✨</div>
-        <h3>AI narrative report <span style="font-size:0.7rem;background:var(--accent-lt);color:var(--accent);padding:2px 8px;border-radius:10px;vertical-align:middle;">Coming soon — Pro</span></h3>
-        <p>Instead of raw data, get a plain-English summary written for your doctor — available in 25 languages. Coming with Dosetrail Pro.</p>
+        <h3>AI narrative report <span style="font-size:0.7rem;background:var(--accent-lt);color:var(--accent);padding:2px 8px;border-radius:10px;vertical-align:middle;">Pro</span></h3>
+        <p>Instead of raw data, get a plain-English summary: "Fatigue appeared 3 days after your dose increase and has occurred 8 of the last 11 days."</p>
       </div>
     </div>
   </div>
@@ -800,17 +799,19 @@
         <a href="https://play.google.com/store/apps/details?id=com.dosetrail.app" class="btn-secondary" style="width:100%;justify-content:center;" target="_blank">Download free</a>
       </div>
       <div class="pricing-card featured">
-        <div class="pricing-badge">Coming soon</div>
+        <div class="pricing-badge">Most popular before appointments</div>
         <div class="pricing-tier">Pro</div>
         <div class="pricing-price">$4.99<sub>/mo</sub></div>
         <div class="pricing-cycle">or $34.99/year — save 42%</div>
         <ul class="pricing-features">
           <li><span class="check">✓</span> Everything in Free</li>
           <li><span class="check">✓</span> AI narrative report</li>
-          <li><span class="check">✓</span> Available in 25 languages</li>
-          <li><span class="check">✓</span> Plain-English summaries for your doctor</li>
+          <li><span class="check">✓</span> Pattern alerts</li>
+          <li><span class="check">✓</span> Photo progression analysis</li>
+          <li><span class="check">✓</span> Unlimited history</li>
+          <li><span class="check">✓</span> Shareable doctor summary</li>
         </ul>
-        <div style="margin-top:auto;padding-top:24px;background:var(--warm);border-radius:12px;padding:12px;text-align:center;font-size:0.85rem;color:var(--muted);">🚀 Pro is coming soon — <a href="mailto:support@dosetrail.com" style="color:var(--accent)">get notified</a></div>
+        <a href="https://play.google.com/store/apps/details?id=com.dosetrail.app" class="btn-primary" style="width:100%;justify-content:center;" target="_blank">Get Pro</a>
       </div>
     </div>
   </div>
@@ -943,7 +944,7 @@
     </ol>
 
     <div class="info-box">
-      <strong>Pro (coming soon):</strong> A Pro tier with AI-generated narrative reports is coming soon. You'll be able to get a plain-English summary of your data — perfect for your next appointment.
+      <strong>Pro users:</strong> Tap "Generate AI Report" to get a plain-English narrative summary of your period — written as if a medical professional reviewed your data. Always shown with a disclaimer that it doesn't replace professional advice.
     </div>
 
     <h2>Setting up medication reminders</h2>
@@ -999,12 +1000,12 @@
 
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">Is Dosetrail free to use?</div>
-      <div class="faq-a">Yes. The core features — daily logging, photo tracking, medication management, timeline, and basic PDF export — are completely free with no time limit. A Pro tier unlocks AI-powered narrative reports, pattern alerts, and additional features for £4.99/month or £34.99/year.</div>
+      <div class="faq-a">Yes. The core features — daily logging, photo tracking, medication management, timeline, and basic PDF export — are completely free with no time limit. A Pro tier unlocks AI-powered narrative reports, pattern alerts, and additional features for $4.99/month or $34.99/year.</div>
     </div>
 
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">Is Dosetrail available on iPhone (iOS)?</div>
-      <div class="faq-a">Currently Dosetrail is Android-only, available on the Google Play Store. An iOS version is coming soon — if you'd like to be notified when it's available, email us at <a href="mailto:support@dosetrail.com">support@dosetrail.com</a>.</div>
+      <div class="faq-a">Currently Dosetrail is Android-only, available on the Google Play Store. An iOS version is planned for a future release. If you'd like to be notified when it's available, email us at support@dosetrail.com.</div>
     </div>
 
     <div class="faq-item">
@@ -1145,7 +1146,6 @@
     <p>Dosetrail requests the following Android permissions:</p>
     <ul>
       <li><strong>Camera</strong> — to photograph visible symptoms. Only used when you actively take a photo.</li>
-      <li><strong>Storage / Media access</strong> — to save and retrieve photos from your device's library.</li>
       <li><strong>Notifications</strong> — to send optional daily reminders to log your symptoms. You can disable these at any time in Settings.</li>
     </ul>
     <p>No permissions are used to collect data beyond the functions described above.</p>
@@ -1193,17 +1193,7 @@
     const navEl = document.getElementById('nav-' + name);
     if (navEl) navEl.classList.add('active');
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    history.replaceState(null, '', '#' + name);
   }
-
-  // On load, check URL hash and show correct page
-  (function() {
-    const hash = window.location.hash.replace('#', '');
-    const valid = ['home', 'instructions', 'faq', 'privacy'];
-    if (hash && valid.includes(hash)) {
-      showPage(hash);
-    }
-  })();
 
   function toggleFaq(el) {
     const item = el.closest('.faq-item');
